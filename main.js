@@ -1,14 +1,13 @@
 const OPTIONS = {
     method: 'GET',
     headers: {
-        'x-rapidapi-key': 'fb56aa7740msh76e5a73e9c2cf5fp131febjsn668618a2c062',
-        'x-rapidapi-host': 'ip-directory.p.rapidapi.com'
+      'x-rapidapi-key': 'fb56aa7740msh76e5a73e9c2cf5fp131febjsn668618a2c062',
+      'x-rapidapi-host': 'ip-directory.p.rapidapi.com'
     }
-
-};
+  };
 
 const fetchIpInfo = ip => {
-    return fetch('https://ip-directory.p.rapidapi.com/${ip}', OPTIONS)
+    return fetch(`https://ip-directory.p.rapidapi.com/lookup/${ip}`, OPTIONS)
         .then(res => res.json())
         .catch(err => console.error(err));
 }
@@ -34,8 +33,6 @@ $form.addEventListener('submit', async (event) => {
 
     $submit.removeAttribute('disabled')
     $submit.removeAttribute('aria-busy')
-    
-
 })
 
 
