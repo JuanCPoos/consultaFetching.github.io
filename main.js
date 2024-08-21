@@ -7,7 +7,7 @@ const OPTIONS = {
   };
 
 const fetchIpInfo = ip => {
-    return fetch(`https://ip-directory.p.rapidapi.com/lookup/${ip}`, OPTIONS)
+    return fetch(`https://ip-directory.p.rapidapi.com/${ip}`, OPTIONS)
         .then(res => res.json())
         .catch(err => console.error(err));
 }
